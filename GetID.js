@@ -26,8 +26,8 @@ const getCryptoIds = async (link, headers, callback) => {
 
   return new Promise((resolve) => {
     resolve(result);
-  })
-}
+  });
+};
 
 /**
  * Exchange result formatter
@@ -41,14 +41,7 @@ const formatResult = (currency) => ({
     name: currency.name || 'no name',
     symbol: currency.symbol || 'not found',
     id: Math.floor(currency.id) || 'no ID',
-})
-
-/**
- * A simple logger
- */
-const logResults = (results) => {
-  Logger.log(results)
-}
+});
 
 const init = () => {
 
@@ -62,6 +55,6 @@ const init = () => {
   results.then(res => {
     res.forEach(el => {
       Logger.log(el);
-    })
-  })
-}
+    });
+  });
+};

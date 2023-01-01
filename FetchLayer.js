@@ -1,7 +1,7 @@
 const DOMAIN = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest";
 
 /**
- * Fecthes current market data about crypto currencies by IDs
+ * Fecthes current market data by IDs
  * 
  * @param link - API link
  * @param headers - should include fields: 
@@ -9,6 +9,8 @@ const DOMAIN = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/lates
  *    "Accept-Encoding": "deflate, gzip",
  *    "X-CMC_PRO_API_KEY": (api key),
  * @param currencyIds - search IDs 
+ * 
+ * @returns new Promise with results
  */
 const fetchDataFromExchange = (link, headers, currencyIds) => {
 

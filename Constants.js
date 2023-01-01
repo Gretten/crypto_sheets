@@ -13,6 +13,8 @@ const headers = {
     "X-CMC_PRO_API_KEY": API_KEY,
 };
 
+const QUERY_METHOD = 'get';
+
 // The current list of currencies I need to fetch
 const CURRENCIES_ID = {
   BTC: "1",
@@ -30,6 +32,5 @@ const OUTPUT_COORDS_ROW_OFFSET = 12;
 const OUTPUT_COORDS_COLUMN = 13;
 
 const ASSETS_SHEET = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
-const TEST_SHEET = SpreadsheetApp.getActiveSpreadsheet().getSheets()[1];
 
 
