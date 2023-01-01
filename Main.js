@@ -8,6 +8,6 @@ const main = () => {
 
   response.then(res => {
     const filteredResponse = transformFetchedData(res);
-    setPricesIntoColumn(filteredResponse, TEST_SHEET);
+    setPricesIntoColumn(filteredResponse, ASSETS_SHEET);
   });
 };

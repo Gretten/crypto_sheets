@@ -9,7 +9,7 @@ const getDataFromCols = (coords, sheet) => {
 };
 
 const setPricesIntoColumn = (result, sheet) => {
-  const currencyColumns = getDataFromCols(INPUT_COORDS, TEST_SHEET);
+  const currencyColumns = getDataFromCols(INPUT_COORDS, ASSETS_SHEET);
 
   const newArray = new Array(currencyColumns.length);
 

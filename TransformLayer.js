@@ -19,13 +19,17 @@ const formIndexesToStringQuery = (inputCurrencies, currenciesMap) => {
   }, []).join(',')
 };
 
+const transformPriceToSheetFormat = (price) => String(price).replace('.', ',');
+
 const transformFetchedData = (res) => {
     return Object.values(res.data).map((el) => {
-      const priceWithoutRedundantZeroes = Math.round(Number(el.quote.USD.price))
+      const priceToNumber = Number(el.quote.USD.price);
+      const priceToFixedFloat = parseFloat(priceToNumber).toFixed(2);
+      const priceInCorrectFormat = transformPriceToSheetFormat(priceToFixedFloat);
 
       return {
         name: el.symbol,
-        price: priceWithoutRedundantZeroes,
+        price: priceInCorrectFormat,
       }
     });
 };
